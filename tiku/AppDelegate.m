@@ -7,19 +7,30 @@
 //
 
 #import "AppDelegate.h"
-
+#import "TabbarViewController.h"
+#import "JRSwizzle.h"
+#import "NSDictionary+Unicode.h"
 @interface AppDelegate ()
-
+@property (nonatomic,strong) TabbarViewController           *tabbarViewController;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self mainViewSetup];
+    
+    [NSDictionary jr_swizzleMethod:@selector(description) withMethod:@selector(my_description) error:nil];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     return YES;
 }
 
+#pragma mark - UI setup
+- (void)mainViewSetup
+{
+    self.tabbarViewController = [[TabbarViewController alloc] init];
+    self.window.rootViewController = self.tabbarViewController;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

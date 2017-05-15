@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="KGk-i7-Jjw" customClass="MainTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MainTableViewCellID" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="126"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_icon1.png" translatesAutoresizingMaskIntoConstraints="NO" id="K6v-lk-iOk">
+                        <rect key="frame" x="21" y="15" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="I02-wg-Sxj"/>
+                            <constraint firstAttribute="height" constant="18" id="tpb-Ny-875"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收藏夹" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-a2-39Q">
+                        <rect key="frame" x="47" y="16" width="40" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="a7y-6h-A0Q"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_tra2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Izp-8r-0dD">
+                        <rect key="frame" x="414" y="15" width="11" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="5dX-ae-YTv"/>
+                            <constraint firstAttribute="width" constant="11" id="ruJ-6p-Gic"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COT-zr-rCt">
+                        <rect key="frame" x="0.0" y="125" width="441" height="1"/>
+                        <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="vcm-vt-vpW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rdU-a2-39Q" firstAttribute="leading" secondItem="K6v-lk-iOk" secondAttribute="trailing" constant="8" id="2iI-z0-eVO"/>
+                    <constraint firstItem="COT-zr-rCt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="D36-Qc-hNc"/>
+                    <constraint firstAttribute="bottom" secondItem="COT-zr-rCt" secondAttribute="bottom" id="E9i-vM-5nv"/>
+                    <constraint firstItem="Izp-8r-0dD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="bid-WK-sUJ"/>
+                    <constraint firstAttribute="trailing" secondItem="Izp-8r-0dD" secondAttribute="trailing" constant="16" id="ojg-bm-pR4"/>
+                    <constraint firstAttribute="trailing" secondItem="COT-zr-rCt" secondAttribute="trailing" id="q5Q-dY-0e6"/>
+                    <constraint firstItem="K6v-lk-iOk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="uti-bY-TqN"/>
+                    <constraint firstItem="K6v-lk-iOk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="w0t-CA-Vr4"/>
+                    <constraint firstItem="rdU-a2-39Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="zPI-pn-h97"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconImageView" destination="K6v-lk-iOk" id="UKt-AQ-aCG"/>
+                <outlet property="titleLabel" destination="rdU-a2-39Q" id="kp5-hK-359"/>
+            </connections>
+            <point key="canvasLocation" x="-115.5" y="22"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="main_icon1.png" width="19" height="19"/>
+        <image name="main_tra2.png" width="10" height="16"/>
+    </resources>
+</document>
